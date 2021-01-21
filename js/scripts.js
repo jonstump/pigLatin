@@ -6,11 +6,10 @@ $(document).ready(function() {
     function vowelCheck(array){
       for (const element of vowels){
         for (let i = 0; i < array.length; i++){
-          if (array[i][0] === element) {
+          if (array[i][0].toLowerCase() === element) {
             const word = array[i];
-            console.log(word);
             words.push(word + "way"); 
-            console.log(words);
+            console.log(words + "This is vowels");
         }
       }
     }
@@ -20,14 +19,35 @@ $(document).ready(function() {
       for (let i = 0; i < array.length; i++){
         if ((array[i][0]).toLowerCase() === 'y') {
           const word = array[i];
-          //console.log(word);
-          //const wordShifted = word.shift();
-          //console.log(wordShifted);
           words.push(word.substring(1) + "yay"); 
-          console.log(words);
+          console.log(words + "This is y");
       }
     }
   }
+
+  function quCheck(array) {
+    for (let i = 0; i < array.length; i++){
+      const word = array[i];
+      const firstLetters = word.substring(0,2);
+      if (firstLetters.toLowerCase() === 'qu') {
+        words.push(word.substring(2) + "quay"); 
+        console.log(words + "This is qu");
+      }
+    }
+  }
+
+
+    //function consonantCheck(array){
+      //for (const element of vowels){
+        //for (let i = 0; i < array.length; i++){
+         // if (array[i][0].toLowerCase() !== element) {
+            //const word = array[i];
+            //words.push(word + ""); 
+            //console.log(words + "this is consonants");
+        //}
+      //}
+    //}
+  //}
 
   
   
@@ -43,6 +63,8 @@ $(document).ready(function() {
     function pigLatin(plArray){
       vowelCheck(plArray);
       yCheck(plArray);
+      quCheck(plArray);
+      // consonantCheck(plArray);
     }
 
     pigLatin(plArray);

@@ -25,15 +25,15 @@ A website created with HTML and Javascript where a user can input a string of wo
 
 **Describe:** pigLatin()
 <br/>
-**Test:** For words beginning with 1 or more consonants: move to end, add "ay"
-<br/>
-**Expect:** pigLatin("should).toEqual("ould-shay")
-
-**Describe:** pigLatin()
-<br/>
 **Test:** If first consonants include "qu": move both to end, add "ay"
 <br/>
 **Expect:** pigLatin("quiet").toEqual("iet-quay")
+
+**Describe:** pigLatin()
+<br/>
+**Test:** For words beginning with 1 or more consonants: move to end, add "ay"
+<br/>
+**Expect:** pigLatin("should).toEqual("ould-shay")
 
 **Describe:** pigLatin()
 <br/>
