@@ -3,18 +3,32 @@ $(document).ready(function() {
   let words = [];
   const vowels = ["a", "e", "i", "o", "u"];
 
-  function vowelCheck(array){
-    for (const element of vowels){
+    function vowelCheck(array){
+      for (const element of vowels){
+        for (let i = 0; i < array.length; i++){
+          if (array[i][0] === element) {
+            const word = array[i];
+            console.log(word);
+            words.push(word + "way"); 
+            console.log(words);
+        }
+      }
+    }
+  }
+
+    function yCheck(array) {
       for (let i = 0; i < array.length; i++){
-        if (array[i][0] === element) {
+        if ((array[i][0]).toLowerCase() === 'y') {
           const word = array[i];
-          console.log(word);
-          words.push(word + "way"); 
+          //console.log(word);
+          //const wordShifted = word.shift();
+          //console.log(wordShifted);
+          words.push(word.substring(1) + "yay"); 
           console.log(words);
       }
     }
   }
-}
+
   
   
   
@@ -28,6 +42,7 @@ $(document).ready(function() {
 
     function pigLatin(plArray){
       vowelCheck(plArray);
+      yCheck(plArray);
     }
 
     pigLatin(plArray);
