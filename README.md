@@ -8,14 +8,38 @@
 A website created with HTML and Javascript where a user can input a string of words and it will output the same string converted to pig latin
 
 
-### Specs
-| Spec | Test | Expect |
-| :-------------     | :------------- | :------------- |
-| **pigLatin()** | For words beginning in "y": treat as consonant | pigLatin("your").toEqual("our-yay") |
-| **pigLatin()** | For words beginning in vowel: add "way" to the end | pigLatin("ocelot").toEqual("ocelot-way") |
-| **pigLatin()** | For words beginning with 1 or more consonants: move to end, add "ay"| pigLatin("should).toEqual("ould-shay") |
-| **pigLatin()** | If first consonants include "qu": move both to end, add "ay" | pigLatin("quiet").toEqual("iet-quay") |
-| **pigLatin()** | Output result to HTML page | Expect to see results on webpage |
+## Specs
+
+### **Test Pseudocode:**
+**Describe:** pigLatin()
+<br/>
+**Test:** For words beginning in vowel: add "way" to the end
+<br/>
+**Expect:**  pigLatin("ocelot").toEqual("ocelot-way")
+
+**Describe:** pigLatin()
+<br/>
+**Test:** For words beginning in "y": treat as consonant
+<br/>
+**Expect:** pigLatin("your").toEqual("our-yay")
+
+**Describe:** pigLatin()
+<br/>
+**Test:** For words beginning with 1 or more consonants: move to end, add "ay"
+<br/>
+**Expect:** pigLatin("should).toEqual("ould-shay")
+
+**Describe:** pigLatin()
+<br/>
+**Test:** If first consonants include "qu": move both to end, add "ay"
+<br/>
+**Expect:** pigLatin("quiet").toEqual("iet-quay")
+
+**Describe:** pigLatin()
+<br/>
+**Test:**  Output result to HTML page
+<br/>
+**Expect:** Expect to see results displayed on webpage
 ## Setup/Installation Requirements
 
 

@@ -1,21 +1,38 @@
 $(document).ready(function() {
+  
+  let words = [];
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  function vowelCheck(array){
+    for (const element of vowels){
+      for (let i = 0; i < array.length; i++){
+        if (array[i][0] === element) {
+          const word = array[i];
+          console.log(word);
+          words.push(word + "way"); 
+          console.log(words);
+      }
+    }
+  }
+}
+  
+  
+  
+  // User logic
   $('form').submit(function(e) {
     e.preventDefault();
     const input = $('input#piglatin').val();
     const plArray = input.split(" ");
-    const vowels = ["a", "e", "i", "o", "u"];
+    console.log(plArray);
 
-    function checkYConsonant(array) {
-      for (let i = 0; i < array.length; i++) {
-        if ((array[i][0]).toLowerCase() === 'y') {
-          const words = array[i];
-          const transformedWord = words.replace(words[0], "");
-          const result = transformedWord + "yay";
-          console.log(result);
-        }
-      }
+
+    function pigLatin(plArray){
+      vowelCheck(plArray);
     }
-    checkYConsonant(plArray);
+
+    pigLatin(plArray);
+  });
+});
 
     //   const slicedLetter = array.slice(0, 1).toString().toLowerCase();
     //   array.push(slicedLetter);
@@ -25,13 +42,10 @@ $(document).ready(function() {
     //   console.log(result);
     // }
 
-
-
     // function pigLatin(plArray){}
     // if (plArray[0] === "y") {
     //   const newArray = input.slice(0, 1);
     //   result = (input.append(newArray)).join() + "ay";
-
 
     //   const result = pigLatin(plArray);
     // }
@@ -41,11 +55,3 @@ $(document).ready(function() {
     //     beginning.concat("way");
     //   };
     // });
-
-
-
-
-
-
-  });
-});
