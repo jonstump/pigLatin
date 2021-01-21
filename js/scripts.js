@@ -6,11 +6,11 @@ $(document).ready(function() {
     const vowels = ["a", "e", "i", "o", "u"];
 
     function checkYConsonant(array) {
-      for(let i = 0; i < array.length; i++) {
+      for (let i = 0; i < array.length; i++) {
         if ((array[i][0]).toLowerCase() === 'y') {
-          let words = array[i];
-          let transformedWord = words.replace(words[0], "");
-          let result = transformedWord + "yay";
+          const words = array[i];
+          const transformedWord = words.replace(words[0], "");
+          const result = transformedWord + "yay";
           console.log(result);
         }
       }
