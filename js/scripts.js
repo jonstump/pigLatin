@@ -36,6 +36,30 @@ $(document).ready(function() {
     }
   }
 
+  function consonantCheck(array){
+    for (const element of vowels){
+      for (let i = 0; i < array.length; i++){
+        const word = array[i];
+        const firstLetters = word.substring(0,2).toLowerCase();
+        const firstLetter = firstLetters.substring(0,1);
+        const secondLetter = firstLetters.substring(1,2);
+        if (firstLetters !== element && "qu"){
+          if(firstLetter !== element && 'y'){
+            console.log(element)
+            if(secondLetter === element){
+              words.push(word.substring(1) + firstLetter + 'ay');
+              console.log(words);
+            } else {
+              words.push(word.substring(2) + firstLetters + 'ay'); 
+              console.log(words + " This is cononants");
+            }
+          }
+        }
+      }
+      break;
+    }
+  }
+
 
     //function consonantCheck(array){
       //for (const element of vowels){
@@ -64,7 +88,7 @@ $(document).ready(function() {
       vowelCheck(plArray);
       yCheck(plArray);
       quCheck(plArray);
-      // consonantCheck(plArray);
+      consonantCheck(plArray);
     }
 
     pigLatin(plArray);
